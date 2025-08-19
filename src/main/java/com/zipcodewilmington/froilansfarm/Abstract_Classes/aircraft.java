@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Abstract_Classes;
 
-public class aircraft {
+public class Aircraft {
     
 }

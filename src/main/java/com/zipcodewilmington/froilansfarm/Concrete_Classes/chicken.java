@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Concrete_Classes;
 
-public class chicken {
+public class Chicken {
     
 }

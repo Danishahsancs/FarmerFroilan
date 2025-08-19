@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Base_Abstract_Classes;
 
-public class shelter {
+public class Shelter {
     
 }
