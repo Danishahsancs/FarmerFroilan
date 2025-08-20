@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Base_Abstract_Classes;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
-import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 
 public abstract  class Animal implements NoiseMaker, Eater {
@@ -14,16 +13,5 @@ public abstract  class Animal implements NoiseMaker, Eater {
 
     public String getName() {
         return name;
-    }
-
-    @Override
-    public void makeNoise() {
-    }
-
-    @Override
-    public void eat(Edible object) {
-    }
-
-   
-      
+    }  
 }
