@@ -1,5 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Concrete_Classes;
 
-public class Earcorn {
-    
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+
+public class Earcorn implements Edible {
+    // no method or variable required for this class
+
 }
