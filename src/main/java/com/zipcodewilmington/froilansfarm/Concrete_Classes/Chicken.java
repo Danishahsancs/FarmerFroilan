@@ -19,8 +19,7 @@ public class Chicken extends Animal implements Produce {
 
     @Override
     public Edible yield() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'yield'");
+        return new EdibleEgg(); // return an EdibleEgg object
     }
     
 
