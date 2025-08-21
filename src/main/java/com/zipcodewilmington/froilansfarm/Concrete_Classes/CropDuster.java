@@ -1,17 +1,22 @@
 package com.zipcodewilmington.froilansfarm.Concrete_Classes;
 
 import com.zipcodewilmington.froilansfarm.Abstract_Classes.Aircraft;
+import com.zipcodewilmington.froilansfarm.Abstract_Classes.Crops;
 
 public class CropDuster extends Aircraft {
 
     public CropDuster() {
-        super(); // Calls Vehicle constructor
+        super();
     }
 
     public void fertilizeCropRow(Croprow cropRow) {
-        // TODO: Implement when CropRow class is setup
-        System.out.println("Fertilizing crop row");
+        System.out.println("NYOOOOOMMM - Flying over crops...");
+        for (Crops crop : cropRow.getCrops()) {
+            crop.fertilize();
+        }
+        System.out.println("Crop row fertilized from the air!");
     }
+
 
     @Override
     public void makeNoise() {

@@ -6,8 +6,7 @@ import com.zipcodewilmington.froilansfarm.Base_Abstract_Classes.Shelter;
 public class FarmHouse extends Shelter<Person>{
 
     public FarmHouse() {
-        super("farmhouse for people");
-        
+        super("farmhouse for people");   
     }
     
 }
