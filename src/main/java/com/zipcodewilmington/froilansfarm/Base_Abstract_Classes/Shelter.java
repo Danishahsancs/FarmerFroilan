@@ -21,7 +21,7 @@ public abstract class Shelter<T> {
 
     public void removeResident(T res) {
         if (!residents.contains(res)) {
-            System.out.println();
+            System.out.println("Resident not found in " + shelterType);
         } else {
             residents.remove(res);
         }

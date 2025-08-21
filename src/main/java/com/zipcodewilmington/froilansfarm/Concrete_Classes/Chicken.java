@@ -9,7 +9,7 @@ public class Chicken extends Animal implements Produce {
 
     @Override
     public void makeNoise() {
-       System.out.println("Cluck");
+        System.out.println("Cluck");
     }
 
     @Override
@@ -20,7 +20,10 @@ public class Chicken extends Animal implements Produce {
 
     @Override
     public Edible yield() {
-        return new EdibleEgg(); // return an EdibleEgg object
+        if (hasBeenFertilized) {
+            return new EdibleEgg();
+        }
+        return null;
     }
 
     @Override
@@ -32,4 +35,4 @@ public class Chicken extends Animal implements Produce {
     public boolean hasBeenFertilized() {
         return hasBeenFertilized;
     }
-    }
+}

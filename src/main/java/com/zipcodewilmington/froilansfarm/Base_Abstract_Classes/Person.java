@@ -39,7 +39,7 @@ public abstract class Person implements Rider, Eater, NoiseMaker{
     // Common eating behavior
     @Override
     public void eat(Edible object) {
-        System.out.println(getName() + " is eating a " + object);
+        System.out.println(getName() + " is eating a " + object.getClass().getSimpleName());
     }
 
     // Common greeting - can be overridden by subclasses
