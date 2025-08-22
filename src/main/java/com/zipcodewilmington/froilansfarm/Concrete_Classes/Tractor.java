@@ -1,11 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Concrete_Classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.zipcodewilmington.froilansfarm.Abstract_Classes.Crops;
 import com.zipcodewilmington.froilansfarm.Abstract_Classes.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Tractor extends FarmVehicle {
 
@@ -34,7 +34,7 @@ public class Tractor extends FarmVehicle {
         return harvestedFood;
     }
 
-    // 🚜 Harvest the entire Field (all CropRows)
+    //  Harvest the entire Field (all CropRows)
     public List<Edible> harvest(Field field) {
         List<Edible> totalHarvest = new ArrayList<>();
 
