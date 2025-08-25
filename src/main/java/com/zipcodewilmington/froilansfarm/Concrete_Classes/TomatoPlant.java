@@ -23,5 +23,10 @@ public class TomatoPlant extends Crops {
     public boolean hasBeenFertilized() {
         return hasBeenFertilized;
     }
+     @Override
+        public String toString() {
+            return "TomatoPlant";
+        }
+
 
 }
