@@ -23,14 +23,16 @@ public class MainApplication {
 
         // Add horses
         int horseCounter = 0;
+        Stable stable = null;
         for (int i = 0; i < 3; i++) {
-            Stable stable = new Stable();
+            stable = new Stable();
             farm.getStables().add(stable);
-            while (stable.getResidents().size() < 3 && horseCounter < 10) {
+            while (stable.getResidents().size() < 3 && horseCounter <= 10) {
                 stable.addResident(new Horse());
                 horseCounter++;
             }
         }
+        stable.addResident(new Horse());
 
         // Add chickens
         int chickenCounter = 0;
@@ -119,25 +121,34 @@ public class MainApplication {
 
     private static void performDailyRoutine(Farm farm, Farmer froilan, Pilot froilanda) {
         // Ride horses
+        int i = 1;
         for (Stable stable : farm.getStables()) {
             for (Horse horse : stable.getResidents()) {
                 froilan.mount(horse);
+                System.out.println("Riding Horse" + i++);
                 froilan.dismount(horse);
             }
         }
 
+        System.out.println();
+
         // Feed horses 3 corn each
+        int horseNum = 1;
         for (Stable stable : farm.getStables()) {
             for (Horse horse : stable.getResidents()) {
-                for (int i = 0; i < 3; i++) {
+                for (i = 0; i < 3; i++) {
                     if (takeFromPantry(Earcorn.class)) {
+                        System.out.print("#" + horseNum + " ");
                         horse.eat(new Earcorn());
                     } else {
                         System.out.println("⚠ Not enough corn to feed horse!");
                     }
                 }
+                horseNum++;
             }
         }
+
+        System.out.println();
 
         // Breakfast
         // Froilan eats 1 Corn, 2 Tomato, 5 Eggs
@@ -145,10 +156,14 @@ public class MainApplication {
         eatFromPantry(froilan, Tomato.class, 2);
         eatFromPantry(froilan, EdibleEgg.class, 5);
 
+        System.out.println();
+
         // Froilanda eats 2 Corn, 1 Tomato, 2 Eggs
         eatFromPantry(froilanda, Earcorn.class, 2);
         eatFromPantry(froilanda, Tomato.class, 1);
         eatFromPantry(froilanda, EdibleEgg.class, 2);
+
+        System.out.println();
 
         System.out.println("Pantry after breakfast: ");
         printPantry();
