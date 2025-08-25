@@ -13,6 +13,10 @@ public class Cornstalk extends Crops {
         }
         return null; // no ear corn produced
     }
+        @Override
+        public String toString() {
+            return "Cornstalk";
+        }
 
     @Override
     public void fertilize() {
